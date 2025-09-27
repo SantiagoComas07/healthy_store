@@ -25,9 +25,45 @@
     </nav>
 </header>
     <div id="app"></div>
-        <footer class="w-full h-[20rem] bg-amber-500">
-        <img src="../../public/img/logo.png" alt="">
-    </footer>
+
+
+<footer class="w-full h-[20rem] bg-amber-500">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between gap-8">
+    <!-- Sección de información de contacto -->
+    <section class="contact-section">
+      <h3 class="text-xl font-semibold mb-4">Contacto</h3>
+      <p>Email: <a href="mailto:contacto@ejemplo.com" class="text-blue-400 hover:underline">contacto@ejemplo.com</a></p>
+      <p>Teléfono: <a href="tel:+34123456789" class="text-blue-400 hover:underline">+34 123 456 789</a></p>
+      <p>Dirección: Calle Falsa 123, Ciudad</p>
+    </section>
+
+    <!-- Sección de enlaces rápidos -->
+    <section class="quick-links">
+      <h3 class="text-xl font-semibold mb-4">Enlaces rápidos</h3>
+      <ul class="space-y-2">
+        <li><a href="#inicio" class="hover:text-blue-400">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-blue-400">Servicios</a></li>
+        <li><a href="#nosotros" class="hover:text-blue-400">Nosotros</a></li>
+        <li><a href="#blog" class="hover:text-blue-400">Blog</a></li>
+      </ul>
+    </section>
+
+    <!-- Sección de redes sociales -->
+    <section class="social-media">
+      <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
+      <div class="flex space-x-4">
+        <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-blue-400">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">Instagram</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer-bottom mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>

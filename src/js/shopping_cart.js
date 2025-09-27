@@ -1,5 +1,10 @@
 export function renderShoppingCart() {
   renderCart();
+  const btnSend = document.getElementById("send");
+  btnSend?.addEventListener('click', (e)=>{
+    e.preventDefault();
+    sendMessage();
+  })
 }
 
 function renderCart() {
@@ -29,18 +34,15 @@ function renderCart() {
           <div>
           <p class="font-semibold text-green-700">${product.name}</p>
           <p class="text-sm text-gray-600">${product.description}</p>
-          <p class="text-sm text-gray-800">Cantidad: <strong>${
-            product.quantity
-          }</strong></p>
-          <p class="text-sm text-gray-800">Precio: $${(
-            product.price * product.quantity
-          ).toFixed(2)}</p>
+          <p class="text-sm text-gray-800">Precio: $${
+            product.price
+          }</p>
         </div>
         </div>
       <div class="self-end">
         <button class="delete bg-red-600 px-2 py-1 rounded-xs text-white cursor-pointer hover:bg-red-700" data-id="${
           product.id
-        }">Eliminar ${product.id}</button>
+        }">Eliminar </button>
       </div>
       `;
     cartList.appendChild(li);
@@ -83,3 +85,34 @@ export function removeItemFromCart(id) {
   
 
 };
+
+
+
+function sendMessage(){
+  const userName = document.getElementById("name").value;
+  const userEmail = document.getElementById("email").value;
+  const textForm = document.getElementById("message").value;
+
+      if (!userName || !userEmail) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    let message = `Hola, mi nombre es ${encodeURIComponent(userName)} y mi email es ${encodeURIComponent(userEmail)}.%0AQuisiera hacer el siguiente pedido:%0A `;
+
+    const information = JSON.parse(localStorage.getItem("cart"));
+    information.forEach((item) => {
+      message += `🛒 Producto: ${item.name}\n💰
+        Precio: $${item.price}\n`
+    });
+
+    message += `%0A Adicionalmente quiero decir: ${encodeURIComponent(textForm)}`;
+    console.log(message)
+
+
+
+ const phoneNumber = 5730032323;
+ const urlWhatsapp = `https://wa.me/${phoneNumber}?text=${message}`;
+ window.open(urlWhatsapp, '_blank');
+
+}

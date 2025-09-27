@@ -15,9 +15,8 @@ export function renderHome(){
           id: generateNewId(),
           name: button.dataset.name,
           description: button.dataset.description,
-          price: parseFloat(button.dataset.price),
+          price: button.dataset.price,
           image: button.dataset.image,
-          quantity: 1
         };
 
         addToCart(product);
