@@ -1,7 +1,7 @@
 import './src/css/style.css';
 
 import {redirecTo, renderRouter} from './src/routes/router.js'
-
+import { removeItemFromCart } from './src/js/shopping_cart.js';
 
 
 window.addEventListener("DOMContentLoaded", renderRouter);
@@ -21,3 +21,4 @@ document.querySelectorAll(".nav-link").forEach(link =>
 
     })
 );
+

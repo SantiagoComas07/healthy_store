@@ -1,15 +1,18 @@
 
 
+// Incremente the number for the id
+
+let numero=0;
+
 
 export function renderHome(){
   // Escuchar clicks en todos los botones "Add to cart"
 
     const buttons = document.querySelectorAll(".add-to-cart");
-
     buttons.forEach(button => {
       button.addEventListener("click", () => {
         const product = {
-          id: parseInt(button.dataset.id),
+          id: generateNewId(),
           name: button.dataset.name,
           description: button.dataset.description,
           price: parseFloat(button.dataset.price),
@@ -52,3 +55,11 @@ export function renderHome(){
     console.log("Producto agregado:", product);
     console.log("Carrito actual:", cart);
   };
+
+  function generateNewId(){
+    let prefix = 'A0';
+    numero += 1;
+    let codigo = prefix + numero.toString();
+    return codigo;
+
+  }
