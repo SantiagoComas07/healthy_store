@@ -111,7 +111,7 @@ function sendMessage(){
 
 
 
- const phoneNumber = 5730032323;
+ const phoneNumber = 573003434875;
  const urlWhatsapp = `https://wa.me/${phoneNumber}?text=${message}`;
  window.open(urlWhatsapp, '_blank');
 

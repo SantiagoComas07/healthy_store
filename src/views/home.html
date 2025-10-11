@@ -1,30 +1,42 @@
 <main>
     <section class="w-full  h-auto my-10">
         <figure class="w-full h-[35rem] overflow-hidden">
-            <img class="w-full h-[70rem] object-cover object-bottom rounded-xs" src="../../public/img/banner.png" alt="Banner">
+            <img class="w-full h-[10rem] md:h-[20rem] lg:h-[70rem] object-cover object-bottom rounded-xs" src="../../public/img/banner.png" alt="Banner">
         </figure>
     </section>
-    <section class="w-full h-[20rem] bg-amber-50">
-        <h2 class="text-green-700 text-2xl font-semibold">Que es nameSweet?</h2>
-        <article>
-            <div class="w-[80rem] h-[10rem] bg-amber-500 rounded-full">
-                <img src="../../public/img/logo.png" alt="Logo">
+    <section class="w-full h-[33rem] bg-amber-50">
+        <article class="py-5">
+            <div class="w-[90%] h-[7rem] mx-auto flex bg-amber-500 items-center  rounded-full">
+                <img class="ml-[3rem]" src="../../public/img/logo.png" alt="Logo">
+                <h2 class="text-amber-700 text-4xl font-semibold">Que es nameSweet?</h2>
+            </div>
+            <div class="w-[50%]  h-[20rem] py-5 mt-5  mx-auto bg-amber-100 flex items-center">
+                
+                <p class="w-[50rem] break-words text-xl text-justify mx-auto">Hola mundo Lorem ipsum dolor sit amet consectetur
+                     adipisicing elit. Odio, hic eaque excepturi mollitia at consequuntur 
+                     incidunt culpa numquam cumque, velit quae delectus unde natus voluptates asperiores. 
+                     Voluptates vero doloribus labore? incidunt culpa numquam cumque, velit quae delectus unde natus voluptates asperiores. 
+                     Voluptates vero doloribus labore?</p>
+                
             </div>
         </article>
     </section>
-    <section id="products" class="w-full h-auto py-2 px-4 my-10 flex gap-7 flex-wrap ">
+    <section id="products" class="w-full h-auto py-2 px-4 my-10 flex gap-7  flex-col">
+        <h2 class="text-amber-700 text-4xl font-semibold">Productos</h2>
+        <div class="flex gap-7 flex-wrap">
         <article class="w-[17rem] h-min-[10rem] rounded-sm bg-amber-50  flex flex-col transition-all ease-in-out hover:scale-110 ">
             <img class="w-[100%] rounded-sm" src="../../public/img/products.jpg" alt="products">
             <div class="flex flex-col gap-5 p-5">
-                <p class=" text-xl text-amber-700 font-semibold">Brownie 1</p>
-                <p>El mejor de todos ( ingredients: ingre 1- ingre 2 - ingre 3) <span
-                        class="text-amber-500 font-bold text-[0.7rem]">200%</span></p>
+                <p class=" text-xl text-amber-700 font-semibold">Golden Piece</p>
+                <p>almendras - banano - Mermelada de frutos rojos - prebioticos <span
+                        class="text-amber-500 font-bold text-[0.7rem]">original</span></p>
                         <p class="font-bold text-xl text-amber-700">$5000 COP</p>
+                        <!-- Data-information to send to the localStorage -->
                 <button
                     class="add-to-cart w-35 flex  gap-3 px-2 py-1 rounded-xs cursor-pointer hover:bg-amber-600 text-white bg-amber-500"
-                    data-name="Brownie 1"
-                    data-description="El mejor de todos (ingredients: ingre 1- ingre 2 - ingre 3)" 
-                    data-price="$5000"
+                    data-name="Golden Piece"
+                    data-description="almendras - banano - Mermelada de frutos rojos - prebioticos" 
+                    data-price="5000"
                     data-image="/img/products.jpg">add to cart
                     <img class="w-5" src="/svg/add.svg" alt="addIcon">
                 </button>
@@ -47,6 +59,6 @@
                 </button>
             </div>
         </article>
-
+ </div>
     </section>
 </main>

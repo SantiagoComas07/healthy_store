@@ -2,6 +2,8 @@
 
 // Incremente the number for the id
 
+import { alertSuccesfully } from "./alerts.js";
+
 let numero=0;
 
 
@@ -37,6 +39,7 @@ export function renderHome(){
   // Guardar el carrito en localStorage
   function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
+    alertSuccesfully("The product has been added to the shopping-cart");
   }
 
   // Agregar un producto al carrito
