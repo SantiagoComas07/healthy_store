@@ -5,53 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="./public/img/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"  href="./src/css/style.css">
-    <title>NutriSweet</title>
+    <title>NutriPiece</title>
   </head>
   <body>
     
-<header class=" w-full bg-amber-500 p-4 text-white">
+<header class=" w-full bg-amber-500 p-4 text-white fixed top-0 left-0 z-30 mt-0">
     <nav class="w-[90%] h-[3rem] flex justify-between mx-auto items-center">
-        <div class="w-[18rem] flex  items-center justify-evenly">
-        <img class="w-[6rem]" src="../../public/img/logo.png" alt="Brownie">
-        <p class="text-white font-bold text-2xl">NutriSweet</p>
+        <div class="w-[10rem] md:w-[18rem] flex  items-center justify-evenly">
+        <img class="w-[4rem] md:w-[6rem]" src="../../public/img/logo.png" alt="Brownie">
+        <p class="text-white font-bold text-2xl">NutriPiece</p>
         </div>
-         <!-- Botón hamburguesa (solo visible en móvil) -->
-        <div class="flex items-center sm:hidden">
-          <button id="menu-toggle" class="text-gray-600 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+         <!--  hamburguesa button -->
+        <div class="flex items-center md:hidden ">
+          <button id="menu-toggle" class="cursor-pointer text-gray-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="white" stroke="white" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
-        <div class="flex items-center gap-5">
-            <ul class=" hidden md:flex gap-3 "> 
-                <li><a href="/"  class=" nav-link px-2 py-1 rounded-xs text-white hover:bg-amber-400 hover:text-amber-200">Get started</a></li>
-                <li><a href="/"  class=" nav-link px-2 py-1 rounded-xs  hover:bg-amber-400 hover:text-amber-200" >Products</a></li>
-            </ul>
+        <!-- Links - Nav -->
+        <div class="hidden md:flex items-center gap-5">
+              <a href="/"  class=" nav-link px-2 py-1 rounded-xs text-white hover:bg-amber-400 hover:text-amber-200">Products</a>
             <a href="/shopping"><img class="w-7 cursor-pointer"  src="/svg/cart.svg" alt="cart"></a>
-        </div>
+          </div>
     </nav>
+            <!-- mobile links -->
+            <div id="mobile-menu" class="w-full h-[10rem] flex justify-around md:hidden mx-auto  bg-amber-500 items-center ">
+                <a href="/"  class=" nav-link w-[50%] h-[100%] flex justify-center items-center px-2 py-1 rounded-xs text-white hover:bg-amber-200">Products</a>
+                <a href="/shopping" class="w-[50%] h-[100%] flex justify-center items-center hover:bg-amber-200"><img class="w-7 cursor-pointer "  src="/svg/cart.svg" alt="cart"></a>
+            </div>
 </header>
     <div id="app"></div>
 
 
-<footer class="w-full h-[20rem] bg-amber-500">
+<footer class="w-full h-[30rem] md:h-[20rem] bg-amber-500 flex flex-col  py-[5rem]">
   <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between gap-8">
     <!-- Sección de información de contacto -->
     <section class="contact-section">
       <h3 class="text-xl text-amber-700 font-bold ">Contacto</h3>
-      <p>Email: <a href="mailto:contacto@ejemplo.com" class="text-blue-400 hover:underline">contacto@ejemplo.com</a></p>
-      <p>Teléfono: <a href="tel:+34123456789" class="text-blue-400 hover:underline">+34 123 456 789</a></p>
-      <p>Dirección: Calle Falsa 123, Ciudad</p>
+      <p>Email: <a href="mailto:contacto@ejemplo.com" class="hover:text-amber-200 hover:underline">contacto@ejemplo.com</a></p>
+      <p>Teléfono: <a href="tel:+34123456789" class="hover:text-amber-200 hover:underline">+34 123 456 789</a></p>
     </section>
 
     <section class="quick-links">
       <h3 class="text-xl text-amber-700 font-bold ">Enlaces rápidos</h3>
       <ul class="space-y-2">
-        <li><a href="/" class="text-amber-100 hover:text-white">Inicio</a></li>
-        <li><a href="/shopping" class="text-amber-100 hover:text-white">Servicios</a></li>
-        <li><a href="#nosotros" class="text-amber-100 hover:text-white">Nosotros</a></li>
+        <li><a href="/" class="text-amber-100 hover:text-amber-200">Inicio</a></li>
+        <li><a href="/shopping" class="text-amber-100 hover:text-amber-200">Servicios</a></li>
+        <li><a href="#nosotros" class="text-amber-100 hover:text-amber-200">Nosotros</a></li>
       </ul>
     </section>
 
@@ -59,14 +61,14 @@
     <section class="social-media">
       <h3 class="text-xl text-amber-700 font-bold ">Síguenos</h3>
       <div class="flex space-x-4">
-        <a href="https://facebook.com" target="_blank" class="hover:text-blue-500">Facebook</a>
-        <a href="https://twitter.com" target="_blank" class="hover:text-blue-400">Twitter</a>
-        <a href="https://instagram.com" target="_blank" class="hover:text-pink-500">Instagram</a>
+        <a href="https://facebook.com" target="_blank" class="hover:text-amber-200">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-amber-200">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-amber-200">Instagram</a>
       </div>
     </section>
   </div>
 
-  <div class="footer-bottom mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
+  <div class="footer-bottom mt-8 pt-4 text-center text-sm text-white">
     <p>&copy; 2025 NameSweet Todos los derechos reservados.</p>
   </div>
 </footer>
