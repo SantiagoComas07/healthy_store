@@ -58,7 +58,7 @@ window.addEventListener("popstate", renderRouter);
 function initRouter() {
     document.addEventListener("DOMContentLoaded", renderRouter);
     document.body.addEventListener('click', (event) => {
-        const target = event.target.closest('A');
+        const target = event.target.closest('a');
         if (target && target.href.startsWith(window.location.origin)) {
             event.preventDefault(); 
             redirecTo(target.pathname);
