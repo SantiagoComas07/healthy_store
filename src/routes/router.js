@@ -4,15 +4,15 @@ import {renderShoppingCart} from '../js/shopping_cart.js';
 
 const routes = {
     "/": {
-        path: "src/views/home.html",
+        path: "/views/home.html",
         setup: renderHome
     },
     "/shopping": {
-        path: "src/views/shopping_cart.html",
+        path: "/views/shopping_cart.html",
         setup: renderShoppingCart
     },
         "/notFound": {
-        path: "src/views/notFound.html",
+        path: "/views/notFound.html",
         setup: null
     }
 
